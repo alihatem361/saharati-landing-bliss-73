@@ -11,7 +11,11 @@ const Header = () => {
     <header className="fixed top-0 right-0 left-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <img src="/logo.svg" alt="سعراتي" className="h-10 w-auto" />
+          <img 
+            src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80" 
+            alt="سعراتي" 
+            className="h-10 w-auto rounded-full"
+          />
           <span className="text-xl font-bold gradient-text">سعراتي</span>
         </div>
         
@@ -47,7 +51,11 @@ const Header = () => {
             <div className="h-full flex flex-col">
               <div className="flex items-center justify-between py-4">
                 <div className="flex items-center gap-2">
-                  <img src="/logo.svg" alt="سعراتي" className="h-8 w-auto" />
+                  <img 
+                    src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&h=256&q=80" 
+                    alt="سعراتي" 
+                    className="h-8 w-auto rounded-full"
+                  />
                   <span className="text-lg font-bold gradient-text">سعراتي</span>
                 </div>
                 <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
