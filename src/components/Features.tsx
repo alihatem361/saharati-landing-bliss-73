@@ -1,5 +1,5 @@
 
-import { Check, TrendingUp, Database, Zap, Clock, Award } from "lucide-react";
+import { Check, TrendingUp, Database, Zap, Clock, Award, Users } from "lucide-react";
 
 const Features = () => {
   return (
@@ -124,7 +124,7 @@ const Features = () => {
           {/* Feature 6 */}
           <div className="feature-card group">
             <div className="h-14 w-14 bg-seraaty-light rounded-xl flex items-center justify-center mb-6 group-hover:bg-seraaty-primary/20 transition-colors">
-              <img src="/community-icon.svg" alt="مجتمع" className="h-7 w-7" />
+              <Users className="h-7 w-7 text-seraaty-primary" />
             </div>
             <h3 className="text-xl font-bold mb-3">مجتمع داعم</h3>
             <p className="text-gray-600 mb-4">

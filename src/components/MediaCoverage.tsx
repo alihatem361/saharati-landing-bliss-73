@@ -21,50 +21,50 @@ const MediaCoverage = () => {
           <div className="flex animate-marquee">
             <div className="flex items-center gap-16 flex-shrink-0">
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/aljazeera.svg" alt="الجزيرة" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">الجزيرة</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/cnn.svg" alt="CNN" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">CNN</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/alarabiya.svg" alt="العربية" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">العربية</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/skynews.svg" alt="سكاي نيوز" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">سكاي نيوز</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/bbc.svg" alt="BBC" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">BBC</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/tech-crunch.svg" alt="TechCrunch" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">TechCrunch</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/forbes.svg" alt="فوربس" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">فوربس</div>
               </div>
             </div>
             
             {/* Duplicate for continuous scroll */}
             <div className="flex items-center gap-16 flex-shrink-0">
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/aljazeera.svg" alt="الجزيرة" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">الجزيرة</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/cnn.svg" alt="CNN" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">CNN</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/alarabiya.svg" alt="العربية" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">العربية</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/skynews.svg" alt="سكاي نيوز" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">سكاي نيوز</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/bbc.svg" alt="BBC" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">BBC</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/tech-crunch.svg" alt="TechCrunch" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">TechCrunch</div>
               </div>
               <div className="w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-                <img src="/media/forbes.svg" alt="فوربس" className="max-h-10" />
+                <div className="text-xl font-bold text-gray-700">فوربس</div>
               </div>
             </div>
           </div>
@@ -74,8 +74,7 @@ const MediaCoverage = () => {
           {/* Media feature 1 */}
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-4">
-              <img src="/media/aljazeera.svg" alt="الجزيرة" className="h-8 ml-3" />
-              <h3 className="font-bold text-lg">الجزيرة</h3>
+              <div className="font-bold text-lg mr-2 text-gray-700">الجزيرة</div>
             </div>
             <p className="text-gray-600 mb-4">
               "سعراتي من أفضل التطبيقات العربية في مجال الصحة والتغذية، يقدم حلول مبتكرة لمتابعة النظام الغذائي"
@@ -86,8 +85,7 @@ const MediaCoverage = () => {
           {/* Media feature 2 */}
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-4">
-              <img src="/media/tech-crunch.svg" alt="TechCrunch" className="h-8 ml-3" />
-              <h3 className="font-bold text-lg">TechCrunch</h3>
+              <div className="font-bold text-lg mr-2 text-gray-700">TechCrunch</div>
             </div>
             <p className="text-gray-600 mb-4">
               "تطبيق سعراتي يعيد تعريف تطبيقات الصحة في الشرق الأوسط من خلال تقديم حلول مخصصة للمستخدم العربي"
@@ -98,8 +96,7 @@ const MediaCoverage = () => {
           {/* Media feature 3 */}
           <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow">
             <div className="flex items-center mb-4">
-              <img src="/media/forbes.svg" alt="فوربس" className="h-8 ml-3" />
-              <h3 className="font-bold text-lg">فوربس</h3>
+              <div className="font-bold text-lg mr-2 text-gray-700">فوربس</div>
             </div>
             <p className="text-gray-600 mb-4">
               "نجاح مذهل لتطبيق سعراتي في جذب أكثر من مليون مستخدم في أقل من عام، وتحقيق نتائج ملموسة للمستخدمين"

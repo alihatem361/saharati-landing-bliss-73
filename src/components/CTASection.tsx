@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const CTASection = () => {
   return (
@@ -15,7 +16,7 @@ const CTASection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
             <Button className="bg-white text-seraaty-primary hover:bg-seraaty-light hover:text-seraaty-primary font-bold text-lg px-8 py-6 h-auto rounded-xl flex items-center gap-2">
-              <img src="/app-store-icon.svg" alt="App Store" className="h-8 w-8" />
+              <Download className="h-6 w-6" />
               <div className="text-start">
                 <div className="text-xs">تحميل من</div>
                 <div className="font-bold">App Store</div>
@@ -23,7 +24,7 @@ const CTASection = () => {
             </Button>
             
             <Button className="bg-white text-seraaty-primary hover:bg-seraaty-light hover:text-seraaty-primary font-bold text-lg px-8 py-6 h-auto rounded-xl flex items-center gap-2">
-              <img src="/google-play-icon.svg" alt="Google Play" className="h-8 w-8" />
+              <Download className="h-6 w-6" />
               <div className="text-start">
                 <div className="text-xs">تحميل من</div>
                 <div className="font-bold">Google Play</div>

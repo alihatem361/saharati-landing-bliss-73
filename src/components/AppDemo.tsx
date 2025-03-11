@@ -10,9 +10,9 @@ const AppDemo = () => {
             <div className="relative">
               <div className="absolute -z-10 w-72 h-72 bg-seraaty-primary/10 rounded-full -top-10 -left-10"></div>
               <img 
-                src="/app-screens.png" 
+                src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
                 alt="واجهة تطبيق سعراتي" 
-                className="relative z-10 mx-auto drop-shadow-2xl max-w-md" 
+                className="relative z-10 mx-auto drop-shadow-2xl max-w-md rounded-xl" 
               />
               <div className="absolute -z-10 w-40 h-40 bg-seraaty-accent/10 rounded-full -bottom-5 -right-5"></div>
             </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, ChevronLeft, Star } from 'lucide-react';
@@ -8,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'أحمد محمود',
     role: 'مستخدم منذ 6 أشهر',
-    avatar: '/avatars/user1.jpg',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
     content: 'تطبيق سعراتي غير حياتي بالكامل! فقدت 15 كيلو في 6 أشهر بفضل التتبع الدقيق للسعرات الحرارية والنصائح المفيدة. سهل الاستخدام وقاعدة البيانات رائعة للمأكولات العربية.',
     rating: 5,
   },
@@ -16,7 +15,7 @@ const testimonials = [
     id: 2,
     name: 'سارة أحمد',
     role: 'مستخدمة منذ عام',
-    avatar: '/avatars/user2.jpg',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
     content: 'أفضل تطبيق لتتبع السعرات الحرارية جربته! أحب التحديات اليومية والأسبوعية التي تحفزني على الاستمرار. خسرت 10 كيلو وحافظت على وزني المثالي لأكثر من 6 أشهر.',
     rating: 5,
   },
@@ -24,7 +23,7 @@ const testimonials = [
     id: 3,
     name: 'محمد علي',
     role: 'مستخدم منذ 3 أشهر',
-    avatar: '/avatars/user3.jpg',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
     content: 'تطبيق رائع لبناء العضلات وتتبع البروتين. ساعدني على زيادة كتلة العضلات وتحسين أدائي في الجيم. أحب ميزة الوصفات الصحية عالية البروتين.',
     rating: 4,
   },
@@ -32,7 +31,7 @@ const testimonials = [
     id: 4,
     name: 'فاطمة حسن',
     role: 'مستخدمة منذ 8 أشهر',
-    avatar: '/avatars/user4.jpg',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
     content: 'تطبيق مميز جداً ويساعد على تغيير نمط الحياة للأفضل. استخدمه لمتابعة نظامي الغذائي خلال فترة الحمل، والنصائح الخاصة بالحوامل مفيدة جداً.',
     rating: 5,
   },
@@ -40,7 +39,7 @@ const testimonials = [
     id: 5,
     name: 'خالد العمري',
     role: 'مستخدم منذ 4 أشهر',
-    avatar: '/avatars/user5.jpg',
+    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80',
     content: 'تطبيق سعراتي ساعدني في السيطرة على مرض السكري. متابعة الكربوهيدرات والسكريات بدقة مع إمكانية تسجيل قراءات السكر في الدم ميزة رائعة.',
     rating: 5,
   },
