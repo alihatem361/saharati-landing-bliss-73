@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 
 const calculateTimeLeft = (targetDate: Date) => {
@@ -23,20 +23,54 @@ const calculateTimeLeft = (targetDate: Date) => {
   return timeLeft;
 };
 
+// إضافة دالة لعمل تأثير التعداد
+const CountUp = ({ end, duration = 2000 }: { end: number, duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef<NodeJS.Timeout | null>(null);
+  const stepTime = Math.floor(duration / end);
+
+  useEffect(() => {
+    let current = 0;
+    countRef.current = setInterval(() => {
+      current += 1;
+      setCount(current);
+      
+      if (current >= end) {
+        if (countRef.current) clearInterval(countRef.current);
+      }
+    }, stepTime);
+    
+    return () => {
+      if (countRef.current) clearInterval(countRef.current);
+    }
+  }, [end, stepTime]);
+  
+  return <>{count}</>;
+};
+
 const NextChallenge = () => {
   // Set the countdown to be 30 days from now
   const challengeDate = new Date();
   challengeDate.setDate(challengeDate.getDate() + 30);
   
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(challengeDate));
+  const [animationStarted, setAnimationStarted] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft(challengeDate));
     }, 1000);
     
-    return () => clearTimeout(timer);
-  });
+    // بدء الأنيميشن بعد 500 مللي ثانية من تحميل الصفحة
+    const animationTimer = setTimeout(() => {
+      setAnimationStarted(true);
+    }, 500);
+    
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(animationTimer);
+    };
+  }, [challengeDate]);
   
   const formatNumber = (num: number) => {
     return num < 10 ? `0${num}` : num;
@@ -79,12 +113,16 @@ const NextChallenge = () => {
           
           <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl flex gap-4 items-center">
-              <div className="text-4xl font-bold">5,783</div>
+              <div className="text-4xl font-bold">
+                {animationStarted ? <CountUp end={5783} duration={1500} /> : 0}
+              </div>
               <div className="text-white/80">مشارك حتى الآن</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl flex gap-4 items-center">
-              <div className="text-4xl font-bold">25,000</div>
+              <div className="text-4xl font-bold">
+                {animationStarted ? <CountUp end={25000} duration={2000} /> : 0}
+              </div>
               <div className="text-white/80">ريال جوائز</div>
             </div>
           </div>
