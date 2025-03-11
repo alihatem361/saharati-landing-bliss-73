@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,11 +28,11 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				seraaty: {
-					primary: '#52B69A',
-					secondary: '#34A0A4',
-					accent: '#168AAD',
-					light: '#D8F3DC',
-					dark: '#184E77',
+					primary: '#00643C', // Saudi green
+					secondary: '#8A6E3E', // Saudi gold
+					accent: '#00401F', // Darker green
+					light: '#F8F7F1', // Sand color
+					dark: '#002B12', // Very dark green
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -111,6 +110,14 @@ export default {
 				marquee: {
 					'0%': { transform: 'translateX(0)' },
 					'100%': { transform: 'translateX(-100%)' }
+				},
+				'desert-wave': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'palm-sway': {
+					'0%, 100%': { transform: 'rotate(-2deg)' },
+					'50%': { transform: 'rotate(2deg)' }
 				}
 			},
 			animation: {
@@ -121,7 +128,9 @@ export default {
 				'slide-in': 'slide-in 0.3s ease-out',
 				'slide-out': 'slide-out 0.3s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'marquee': 'marquee 25s linear infinite'
+				'marquee': 'marquee 25s linear infinite',
+				'desert-wave': 'desert-wave 6s ease-in-out infinite',
+				'palm-sway': 'palm-sway 8s ease-in-out infinite'
 			}
 		}
 	},

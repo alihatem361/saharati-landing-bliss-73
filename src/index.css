@@ -104,7 +104,7 @@
 /* Custom classes for our components */
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-seraaty-dark via-seraaty-accent to-seraaty-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[#00643C] via-[#8A6E3E] to-[#00643C] bg-clip-text text-transparent;
   }
   
   .arrow-pointer {
@@ -113,18 +113,50 @@
   
   .arrow-pointer::after {
     content: '';
-    @apply absolute w-6 h-6 border-t-2 border-r-2 border-seraaty-primary rotate-45 transform;
+    @apply absolute w-6 h-6 border-t-2 border-r-2 border-[#00643C] rotate-45 transform;
   }
   
   .feature-card {
-    @apply p-6 rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-seraaty-light;
+    @apply p-6 rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-[#00643C]/20;
   }
   
   .btn-primary {
-    @apply px-6 py-3 bg-seraaty-primary text-white rounded-full font-semibold transition-all hover:bg-seraaty-accent shadow-md hover:shadow-lg;
+    @apply px-6 py-3 bg-[#00643C] text-white rounded-full font-semibold transition-all hover:bg-[#00643C]/90 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 bg-white text-seraaty-primary border border-seraaty-primary rounded-full font-semibold transition-all hover:bg-seraaty-light shadow-sm hover:shadow-md;
+    @apply px-6 py-3 bg-white text-[#00643C] border border-[#00643C] rounded-full font-semibold transition-all hover:bg-[#F8F7F1] shadow-sm hover:shadow-md;
   }
+
+  /* Saudi-inspired decorative elements */
+  .saudi-pattern {
+    @apply relative overflow-hidden;
+  }
+  
+  .saudi-pattern::before {
+    content: '';
+    @apply absolute inset-0 opacity-5 bg-[url('/saudi-pattern.svg')] bg-repeat;
+  }
+  
+  .saudi-border {
+    @apply border-[#00643C];
+  }
+  
+  .saudi-accent {
+    @apply text-[#8A6E3E];
+  }
+}
+
+/* Saudi-inspired animations */
+@keyframes desert-wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-desert-wave {
+  animation: desert-wave 6s ease-in-out infinite;
 }
