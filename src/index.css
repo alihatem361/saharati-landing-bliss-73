@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -95,7 +91,40 @@
     @apply border-border;
   }
 
+  html {
+    @apply font-cairo scroll-smooth;
+    direction: rtl;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom classes for our components */
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-seraaty-dark via-seraaty-accent to-seraaty-primary bg-clip-text text-transparent;
+  }
+  
+  .arrow-pointer {
+    @apply relative;
+  }
+  
+  .arrow-pointer::after {
+    content: '';
+    @apply absolute w-6 h-6 border-t-2 border-r-2 border-seraaty-primary rotate-45 transform;
+  }
+  
+  .feature-card {
+    @apply p-6 rounded-xl bg-white shadow-lg transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-seraaty-light;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-seraaty-primary text-white rounded-full font-semibold transition-all hover:bg-seraaty-accent shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-white text-seraaty-primary border border-seraaty-primary rounded-full font-semibold transition-all hover:bg-seraaty-light shadow-sm hover:shadow-md;
   }
 }
